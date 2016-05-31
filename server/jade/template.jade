@@ -1,0 +1,20 @@
+doctype
+html(lang='en', ng-app='app')
+    head
+        meta(charset='utf8')
+        base(href='/')
+        title React end-to-end
+        link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    body
+        div(id='app')!= content
+        
+        div.container-fluid
+            div.row
+                header.root
+                    h2.text-center Angular end-to-end
+                    
+                hr
+                
+                div(ui-view)
+        
+        script(src='./app.js')
