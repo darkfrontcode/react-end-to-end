@@ -3,13 +3,14 @@ import path from 'path'
 import React                     		from 'react'
 import { renderToString }        		from 'react-dom/server'
 import { RouterContext, match, router } from 'react-router'
-import { createLocation } 				from 'history'
-import routes                    		from './server/react/routes/routes'
+import createLocation 					from 'history/lib/createLocation'
+import routes                    		from '../react/routes/routes'
 import webpack 							from 'webpack'
 import webpack_config 					from '../webpack/development'
 import webpack_dev_middleware 			from 'webpack-dev-middleware'
 import webpack_hot_middleware 			from 'webpack-hot-middleware'
-import friends							from 'resources/friends'
+import Provider 						from '../react/provider/provider'
+import friends							from '../resources/friends'
 
 const port = process.env.PORT || 3000
 const environment = process.env.NODE_ENV || 'development'
@@ -47,7 +48,8 @@ app.use((req, res) => {
 		)
 
 		res.render('template', {
-			content: renderToString(component)
+			content: renderToString(component),
+			props: JSON.stringify(friends)
 		})
 	})
 })

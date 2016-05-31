@@ -7,13 +7,13 @@ export default class Home extends React.Component{
 	}
 	render(){
 
-		console.log(this.props.friends)
+		// console.log(this.props.friends)
 
 		return <section id="home">
 					{
-						this.props.friends.map((friend, key)=>{
-							return <span>{friend.first_name} {friend.last_name}</span>
-						})
+						// this.props.friends.map((friend, key)=>{
+						// 	return <span>{friend.first_name} {friend.last_name}</span>
+						// })
 					}
 				</section>
 	}

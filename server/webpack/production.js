@@ -22,7 +22,7 @@ module.exports = {
 			},
 			{
 				test: /\.styl$/,
-				loader: ExtractTextPlugin.extract('style-loader', 'stylus-loader')
+				loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader')
 			}
 		]
 	},

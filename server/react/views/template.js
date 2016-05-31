@@ -3,17 +3,30 @@ import React, {Component} from 'react'
 export default class App extends Component{
 	constructor(props, context){
 		super(props, context)
-		this.state = context.friends
+		// console.log(this.props)
+		// this.state = context.friends
 	}
 	render(){
 		return 	<div className="template">
-					{React.cloneElement(this.props.children, {
-						friends: this.state
-					})}
+
+					
+					div.container-fluid
+			            div.row
+			                header.root
+			                    h2.text-center Angular end-to-end
+
+			                hr
+
+					{this.props.children}
+					{
+						// React.cloneElement(this.props.children, {
+						// 	friends: this.state
+						// })
+					}
 				</div>
 	}
 }
 
 App.contextTypes = {
-	data: React.PropTypes.object.isRequired
+	friends: React.PropTypes.object.isRequired
 }

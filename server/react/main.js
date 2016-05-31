@@ -9,11 +9,11 @@ import style from '../stylus/main'
 const create_history = useRouterHistory(createBrowserHistory)
 const history = create_history()
 
-let data = window.__INITIAL_STATE__
+let props = window.__INITIAL_STATE__
 
 match({ history, routes }, (error, redirectLocation, renderProps) => {
 	render(
-		<Provider data={data}>
+		<Provider friends={props}>
 			<Router {...renderProps} />
 		</Provider>,
 		document.getElementById('app')

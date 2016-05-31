@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class Provider extends Component {
 	getChildContext() {
 		return {
-			friend: this.props.friend
+			friends: this.props.friends
 		}
 	}
 	render() {
@@ -12,5 +12,5 @@ export default class Provider extends Component {
 }
 
 Provider.childContextTypes = {
-	friend: React.PropTypes.object.isRequired
+	friends: React.PropTypes.object.isRequired
 }
