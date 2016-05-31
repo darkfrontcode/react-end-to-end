@@ -3,25 +3,24 @@ import React, {Component} from 'react'
 export default class App extends Component{
 	constructor(props, context){
 		super(props, context)
-		// console.log(this.props)
-		// this.state = context.friends
+		this.state = {
+			friends: context.friends.friends
+		}
 	}
 	render(){
 		return 	<div className="template">
-
-					
-					div.container-fluid
-			            div.row
-			                header.root
-			                    h2.text-center Angular end-to-end
-
-			                hr
-
-					{this.props.children}
+					<div className="container-fluid">
+						<div className="row">
+							<header className="root">
+								<h2 className="text-center">React End(2)End</h2>
+							</header>
+						</div>
+					</div>
+					<hr/>
 					{
-						// React.cloneElement(this.props.children, {
-						// 	friends: this.state
-						// })
+						React.cloneElement(this.props.children, {
+							friends: this.state.friends
+						})
 					}
 				</div>
 	}
