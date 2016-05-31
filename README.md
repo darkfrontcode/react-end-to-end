@@ -1,4 +1,4 @@
-angular end-to-end
+React End(2)End
 =====================
 
 ## how to install
@@ -47,21 +47,32 @@ type npm run cucumber
 
 ## dev-dependencies
 ```
-angular
-angular-ui-router
 babel-core
 babel-loader
 babel-preset-es2015
+babel-preset-react
+babel-preset-react-hmre
 babel-preset-stage-0
 chai
 chai-as-promised
+css-loader
 cucumber
 express
+extract-text-webpack-plugin
+history
 jade
 jquery
+nodemon
 protractor
 protractor-cucumber-framework
+react
+react-dom
+react-router
+style-loader
+stylus
+stylus-loader
 webpack
 webpack-dev-middleware
 webpack-hot-middleware
+
 ```

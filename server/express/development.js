@@ -25,9 +25,7 @@ app.use(webpack_dev_middleware(webpack_compiler, {
 	stats: { colors: true },
 	historyApiFallback: true
 }))
-app.use(webpack_hot_middleware(webpack_compiler, {
-	log: console.log
-}))
+app.use(webpack_hot_middleware(webpack_compiler))
 
 app.use((req, res) => {
 

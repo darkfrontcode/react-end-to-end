@@ -3,7 +3,11 @@
 module.exports = {
     start: function(){
         var items = this.elements;
-        browser.get("http://localhost:3000");
+        browser.ignoreSynchronization = true;
+        browser.get("http://localhost:3000/");
+        browser.getCurrentUrl().then(function(url) {
+            expect(url).toEqual("http://localhost:3000/");
+        });
         items.find_it_out.click();
         expect(items.try_again.isDisplayed()).toBeTruthy();
     },
@@ -18,15 +22,15 @@ module.exports = {
         var items = this.elements;
         expect(items.list_friends_title.getText()).toEqual("Your friends list");
         items.list_of_friends.then(function(friends){
-            expect(friends.length).toEqual(20);
+            expect(friends.length).toEqual(30);
         })
     },
     elements:{
         find_it_out: element(by.buttonText("Find it out")),
         try_again: element(by.buttonText("Try again?")),
         best_friend_name: element(by.css('h4 strong u')),
-        full_list: element(by.buttonText("See full list of your friends")),
+        full_list: element(by.css("#button_list")),
         list_friends_title: element(by.css('table h2')),
-        list_of_friends: element.all(by.repeater('friend in about.listFriends'))
+        list_of_friends: element.all(by.css('table tbody tr'))
     }
 }
