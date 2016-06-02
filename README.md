@@ -4,45 +4,36 @@ React End(2)End
 ## how to install
 
 ```
-open your terminal,
-type npm install,
+npm install
 wait until the packages are ready
 ```
 
 ## how to run in production
 
 ```
-in your terminal,
-type npm run webpack,
-wait until the process is finished,
-then type npm run production,
-open your favorite browser in http://localhost:3000 address
+npm run webpack
+wait until webpack build proccess is finished
+then type npm run production
 ```
 
 ## how to run in development
 
 ```
-in your terminal,
-type npm start,
-open your favorite browser in http://localhost:3000 address
+npm start
 ```
 
 ## how to run protractor test
 
 ```
-run webdriver-manager, ( webdriver-manager start )
-then run project in production mode ( npm run production ),
-then in your terminal,
-type npm run protractor
+run webdriver-manager ( webdriver-manager start )
+npm run protractor
 ```
 
 ## how to run cucumber test
 
 ```
-run webdriver-manager, ( webdriver-manager start )
-then run project in production mode ( npm run production ),
-then in your terminal,
-type npm run cucumber
+run webdriver-manager ( webdriver-manager start )
+npm run cucumber
 ```
 
 ## dev-dependencies
@@ -53,6 +44,7 @@ babel-preset-es2015
 babel-preset-react
 babel-preset-react-hmre
 babel-preset-stage-0
+concurrently
 chai
 chai-as-promised
 css-loader

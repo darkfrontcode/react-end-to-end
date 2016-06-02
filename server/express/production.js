@@ -37,7 +37,7 @@ app.use((req, res) => {
 				<RouterContext {...renderProps} />
 			</Provider>
 		)
-		
+
 		const content = renderToString(component)
 
 		res.render('template', {
